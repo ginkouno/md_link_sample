@@ -2,7 +2,7 @@
 
 - <a href="#resource-shop">Shop</a>
   - <a href="#shop-shop-search-api">GET /api/shops</a>
-  - <a href="#shop-店舗情報詳細-api">GET /api/shops/{shop_id}</a>
+  - <a href="#shop-shop-detail-api">GET /api/shops/{shop_id}</a>
 
 ## <a name="resource-shop">Shop</a>
 
@@ -38,15 +38,15 @@ GET /api/shops
 
 | Name | Type | Description | Example |
 | ------- | ------- | ------- | ------- |
-| **latitude** | *string* | ユーザの現在位置(緯度) | `"35.695192"` |
-| **longitude** | *string* | ユーザの現在位置(経度) | `"139.758681"` |
+| **latitude** | *string* | target latitude | `"35.695192"` |
+| **longitude** | *string* | target longitude | `"139.758681"` |
 
 
 #### Optional Parameters
 
 | Name | Type | Description | Example |
 | ------- | ------- | ------- | ------- |
-| **name** | *string* | 中間一致 | `"幸"` |
+| **name** | *string* | match word | `"hot"` |
 
 
 #### Curl Example
@@ -54,7 +54,7 @@ GET /api/shops
 ```bash
 $ curl -n https://api.yasu.com/api/shops
  -G \
-  -d name=%E5%B9%B8 \
+  -d name=hot \
   -d latitude=35.695192 \
   -d longitude=139.758681
 ```
@@ -81,7 +81,7 @@ HTTP/1.1 200 OK
 
 </details>
 
-### <a name="link-GET-shop-/api/shops/{(%23%2Fdefinitions%2Fshop%2Fdefinitions%2Fid)}">Shop 店舗情報詳細 API</a>
+### <a name="link-GET-shop-/api/shops/{(%23%2Fdefinitions%2Fshop%2Fdefinitions%2Fid)}">Shop Shop Detail API</a>
 
 <details>
 
